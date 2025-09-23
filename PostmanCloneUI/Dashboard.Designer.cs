@@ -75,6 +75,7 @@
             callApiButton.TabIndex = 3;
             callApiButton.Text = "Go";
             callApiButton.UseVisualStyleBackColor = true;
+            callApiButton.Click += callApiButton_Click;
             // 
             // apiTextbox
             // 
