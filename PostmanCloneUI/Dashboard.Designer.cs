@@ -28,20 +28,123 @@
         /// </summary>
         private void InitializeComponent()
         {
+            formHeader = new Label();
+            apiLabel = new Label();
+            resultsLabel = new Label();
+            callApiButton = new Button();
+            apiTextbox = new TextBox();
+            resultsTextbox = new TextBox();
+            statusStrip = new StatusStrip();
+            systemStatus = new ToolStripStatusLabel();
+            statusStrip.SuspendLayout();
             SuspendLayout();
+            // 
+            // formHeader
+            // 
+            formHeader.AutoSize = true;
+            formHeader.Font = new Font("Segoe UI", 20.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            formHeader.Location = new Point(50, 51);
+            formHeader.Name = "formHeader";
+            formHeader.Size = new Size(209, 37);
+            formHeader.TabIndex = 0;
+            formHeader.Text = "Postman Clone";
+            // 
+            // apiLabel
+            // 
+            apiLabel.AutoSize = true;
+            apiLabel.Location = new Point(50, 135);
+            apiLabel.Name = "apiLabel";
+            apiLabel.Size = new Size(36, 21);
+            apiLabel.TabIndex = 1;
+            apiLabel.Text = "Api:";
+            // 
+            // resultsLabel
+            // 
+            resultsLabel.AutoSize = true;
+            resultsLabel.Location = new Point(50, 195);
+            resultsLabel.Name = "resultsLabel";
+            resultsLabel.Size = new Size(60, 21);
+            resultsLabel.TabIndex = 2;
+            resultsLabel.Text = "Results";
+            // 
+            // callApiButton
+            // 
+            callApiButton.Location = new Point(623, 132);
+            callApiButton.Name = "callApiButton";
+            callApiButton.Size = new Size(52, 29);
+            callApiButton.TabIndex = 3;
+            callApiButton.Text = "Go";
+            callApiButton.UseVisualStyleBackColor = true;
+            // 
+            // apiTextbox
+            // 
+            apiTextbox.BorderStyle = BorderStyle.FixedSingle;
+            apiTextbox.Location = new Point(92, 132);
+            apiTextbox.Name = "apiTextbox";
+            apiTextbox.Size = new Size(506, 29);
+            apiTextbox.TabIndex = 4;
+            // 
+            // resultsTextbox
+            // 
+            resultsTextbox.BackColor = Color.White;
+            resultsTextbox.BorderStyle = BorderStyle.FixedSingle;
+            resultsTextbox.Location = new Point(50, 244);
+            resultsTextbox.Multiline = true;
+            resultsTextbox.Name = "resultsTextbox";
+            resultsTextbox.ReadOnly = true;
+            resultsTextbox.ScrollBars = ScrollBars.Both;
+            resultsTextbox.Size = new Size(625, 271);
+            resultsTextbox.TabIndex = 5;
+            // 
+            // statusStrip
+            // 
+            statusStrip.Items.AddRange(new ToolStripItem[] { systemStatus });
+            statusStrip.Location = new Point(0, 544);
+            statusStrip.Name = "statusStrip";
+            statusStrip.Size = new Size(724, 22);
+            statusStrip.TabIndex = 6;
+            statusStrip.Text = "statusStrip1";
+            // 
+            // systemStatus
+            // 
+            systemStatus.Font = new Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            systemStatus.Name = "systemStatus";
+            systemStatus.Size = new Size(44, 17);
+            systemStatus.Text = "Ready";
             // 
             // Dashboard
             // 
-            AutoScaleDimensions = new SizeF(11F, 25F);
+            AutoScaleDimensions = new SizeF(9F, 21F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1258, 750);
-            Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            Margin = new Padding(5, 5, 5, 5);
+            BackColor = Color.White;
+            ClientSize = new Size(724, 566);
+            Controls.Add(statusStrip);
+            Controls.Add(resultsTextbox);
+            Controls.Add(apiTextbox);
+            Controls.Add(callApiButton);
+            Controls.Add(resultsLabel);
+            Controls.Add(apiLabel);
+            Controls.Add(formHeader);
+            Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            FormBorderStyle = FormBorderStyle.FixedSingle;
+            Margin = new Padding(4);
             Name = "Dashboard";
             Text = "Postman Clone";
+            statusStrip.ResumeLayout(false);
+            statusStrip.PerformLayout();
             ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
+
+        private Label formHeader;
+        private Label apiLabel;
+        private Label resultsLabel;
+        private Button callApiButton;
+        private TextBox apiTextbox;
+        private TextBox resultsTextbox;
+        private StatusStrip statusStrip;
+        private ToolStripStatusLabel systemStatus;
     }
 }
