@@ -1,0 +1,4 @@
+<Solution>
+  <Project Path="PostmanCloneLibrary/PostmanCloneLibrary.csproj" />
+  <Project Path="PostmanCloneUI/PostmanCloneUI.csproj" />
+</Solution>
