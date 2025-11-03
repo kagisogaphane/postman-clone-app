@@ -14,7 +14,7 @@ namespace PostmanCloneUI
             {
                 systemStatus.Text = "Calling API.......";
 
-                await Task.Delay(2000); // Delay the task by 2s
+                await Task.Delay(3000); // Delay the task by 2s
 
                 systemStatus.Text = "Ready";
             }
