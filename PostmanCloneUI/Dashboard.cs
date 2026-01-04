@@ -1,7 +1,11 @@
+using PostmanCloneLibrary;
 namespace PostmanCloneUI
 {
+
     public partial class Dashboard : Form
     {
+        //Create an ApiAccess Object
+        private readonly ApiAccess api = new();
         public Dashboard()
         {
             InitializeComponent();
@@ -14,7 +18,7 @@ namespace PostmanCloneUI
             {
                 systemStatus.Text = "Calling API.......";
 
-                await Task.Delay(3000); // Delay the task by 2s
+                resultsTextbox.Text = await api.CallApiAsync(apiTextbox.Text);
 
                 systemStatus.Text = "Ready";
             }
@@ -22,8 +26,13 @@ namespace PostmanCloneUI
             {
                 resultsLabel.Text = "Error: " + ex.Message;
                 systemStatus.Text = "Error";
-                
+
             }
+
+        }
+
+        private void Dashboard_Load(object sender, EventArgs e)
+        {
 
         }
     }

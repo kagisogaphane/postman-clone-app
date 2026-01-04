@@ -45,7 +45,7 @@
             formHeader.Font = new Font("Segoe UI", 20.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
             formHeader.Location = new Point(50, 51);
             formHeader.Name = "formHeader";
-            formHeader.Size = new Size(209, 37);
+            formHeader.Size = new Size(259, 46);
             formHeader.TabIndex = 0;
             formHeader.Text = "Postman Clone";
             // 
@@ -54,7 +54,7 @@
             apiLabel.AutoSize = true;
             apiLabel.Location = new Point(50, 135);
             apiLabel.Name = "apiLabel";
-            apiLabel.Size = new Size(36, 21);
+            apiLabel.Size = new Size(46, 28);
             apiLabel.TabIndex = 1;
             apiLabel.Text = "Api:";
             // 
@@ -63,7 +63,7 @@
             resultsLabel.AutoSize = true;
             resultsLabel.Location = new Point(50, 195);
             resultsLabel.Name = "resultsLabel";
-            resultsLabel.Size = new Size(60, 21);
+            resultsLabel.Size = new Size(72, 28);
             resultsLabel.TabIndex = 2;
             resultsLabel.Text = "Results";
             // 
@@ -82,7 +82,7 @@
             apiTextbox.BorderStyle = BorderStyle.FixedSingle;
             apiTextbox.Location = new Point(92, 132);
             apiTextbox.Name = "apiTextbox";
-            apiTextbox.Size = new Size(506, 29);
+            apiTextbox.Size = new Size(506, 34);
             apiTextbox.TabIndex = 4;
             // 
             // resultsTextbox
@@ -99,10 +99,11 @@
             // 
             // statusStrip
             // 
+            statusStrip.ImageScalingSize = new Size(20, 20);
             statusStrip.Items.AddRange(new ToolStripItem[] { systemStatus });
-            statusStrip.Location = new Point(0, 544);
+            statusStrip.Location = new Point(0, 537);
             statusStrip.Name = "statusStrip";
-            statusStrip.Size = new Size(724, 22);
+            statusStrip.Size = new Size(724, 29);
             statusStrip.TabIndex = 6;
             statusStrip.Text = "statusStrip1";
             // 
@@ -110,12 +111,12 @@
             // 
             systemStatus.Font = new Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
             systemStatus.Name = "systemStatus";
-            systemStatus.Size = new Size(44, 17);
+            systemStatus.Size = new Size(56, 23);
             systemStatus.Text = "Ready";
             // 
             // Dashboard
             // 
-            AutoScaleDimensions = new SizeF(9F, 21F);
+            AutoScaleDimensions = new SizeF(11F, 28F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.White;
             ClientSize = new Size(724, 566);
@@ -131,6 +132,7 @@
             Margin = new Padding(4);
             Name = "Dashboard";
             Text = "Postman Clone";
+            Load += Dashboard_Load;
             statusStrip.ResumeLayout(false);
             statusStrip.PerformLayout();
             ResumeLayout(false);
