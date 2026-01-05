@@ -30,7 +30,6 @@
         {
             formHeader = new Label();
             apiLabel = new Label();
-            resultsLabel = new Label();
             callApiButton = new Button();
             apiTextbox = new TextBox();
             resultsTextbox = new TextBox();
@@ -58,15 +57,6 @@
             apiLabel.Size = new Size(42, 21);
             apiLabel.TabIndex = 1;
             apiLabel.Text = "URL:";
-            // 
-            // resultsLabel
-            // 
-            resultsLabel.AutoSize = true;
-            resultsLabel.Location = new Point(50, 195);
-            resultsLabel.Name = "resultsLabel";
-            resultsLabel.Size = new Size(60, 21);
-            resultsLabel.TabIndex = 2;
-            resultsLabel.Text = "Results";
             // 
             // callApiButton
             // 
@@ -136,7 +126,6 @@
             Controls.Add(resultsTextbox);
             Controls.Add(apiTextbox);
             Controls.Add(callApiButton);
-            Controls.Add(resultsLabel);
             Controls.Add(apiLabel);
             Controls.Add(formHeader);
             Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
@@ -155,7 +144,6 @@
 
         private Label formHeader;
         private Label apiLabel;
-        private Label resultsLabel;
         private Button callApiButton;
         private TextBox apiTextbox;
         private TextBox resultsTextbox;

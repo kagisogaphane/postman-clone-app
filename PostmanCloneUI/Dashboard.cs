@@ -21,6 +21,7 @@ namespace PostmanCloneUI
                 systemStatus.Text = "Invalid URL";
                 return;
             }
+
             try
             {
                
@@ -29,9 +30,9 @@ namespace PostmanCloneUI
 
                 systemStatus.Text = "Ready";
             }
-            catch (Exception ex)
+            catch (Exception)
             {
-                resultsLabel.Text = "Error: " + ex.Message;
+                
                 systemStatus.Text = "Error";
 
             }
