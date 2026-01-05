@@ -4,8 +4,7 @@ namespace PostmanCloneUI
 
     public partial class Dashboard : Form
     {
-        //Create an ApiAccess Object
-        private readonly ApiAccess api = new();
+        private readonly IApiAccess api = new ApiAccess();
         public Dashboard()
         {
             InitializeComponent();
@@ -13,10 +12,18 @@ namespace PostmanCloneUI
 
         private async void callApiButton_Click(object sender, EventArgs e)
         {
+            systemStatus.Text = "Calling API.......";
+            resultsTextbox.Text = string.Empty;
+
             //Validate the API URL
+            if (api.IsValidUrl(apiTextbox.Text) == false)
+            {
+                systemStatus.Text = "Invalid URL";
+                return;
+            }
             try
             {
-                systemStatus.Text = "Calling API.......";
+               
 
                 resultsTextbox.Text = await api.CallApiAsync(apiTextbox.Text);
 
@@ -34,6 +41,12 @@ namespace PostmanCloneUI
         private void Dashboard_Load(object sender, EventArgs e)
         {
 
+        }
+
+        // Call Formated Json
+        private async void btnFormatJson_Click(object sender, EventArgs e)
+        {
+            resultsTextbox.Text = await api.CallApiAsync(apiTextbox.Text, true);
         }
     }
 }

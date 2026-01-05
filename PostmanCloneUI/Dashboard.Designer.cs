@@ -36,6 +36,7 @@
             resultsTextbox = new TextBox();
             statusStrip = new StatusStrip();
             systemStatus = new ToolStripStatusLabel();
+            btnFormatJson = new Button();
             statusStrip.SuspendLayout();
             SuspendLayout();
             // 
@@ -45,25 +46,25 @@
             formHeader.Font = new Font("Segoe UI", 20.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
             formHeader.Location = new Point(50, 51);
             formHeader.Name = "formHeader";
-            formHeader.Size = new Size(259, 46);
+            formHeader.Size = new Size(162, 37);
             formHeader.TabIndex = 0;
-            formHeader.Text = "Postman Clone";
+            formHeader.Text = "API TESTER";
             // 
             // apiLabel
             // 
             apiLabel.AutoSize = true;
             apiLabel.Location = new Point(50, 135);
             apiLabel.Name = "apiLabel";
-            apiLabel.Size = new Size(46, 28);
+            apiLabel.Size = new Size(42, 21);
             apiLabel.TabIndex = 1;
-            apiLabel.Text = "Api:";
+            apiLabel.Text = "URL:";
             // 
             // resultsLabel
             // 
             resultsLabel.AutoSize = true;
             resultsLabel.Location = new Point(50, 195);
             resultsLabel.Name = "resultsLabel";
-            resultsLabel.Size = new Size(72, 28);
+            resultsLabel.Size = new Size(60, 21);
             resultsLabel.TabIndex = 2;
             resultsLabel.Text = "Results";
             // 
@@ -71,9 +72,9 @@
             // 
             callApiButton.Location = new Point(623, 132);
             callApiButton.Name = "callApiButton";
-            callApiButton.Size = new Size(52, 29);
+            callApiButton.Size = new Size(52, 34);
             callApiButton.TabIndex = 3;
-            callApiButton.Text = "Go";
+            callApiButton.Text = "Test";
             callApiButton.UseVisualStyleBackColor = true;
             callApiButton.Click += callApiButton_Click;
             // 
@@ -82,7 +83,7 @@
             apiTextbox.BorderStyle = BorderStyle.FixedSingle;
             apiTextbox.Location = new Point(92, 132);
             apiTextbox.Name = "apiTextbox";
-            apiTextbox.Size = new Size(506, 34);
+            apiTextbox.Size = new Size(506, 29);
             apiTextbox.TabIndex = 4;
             // 
             // resultsTextbox
@@ -101,9 +102,9 @@
             // 
             statusStrip.ImageScalingSize = new Size(20, 20);
             statusStrip.Items.AddRange(new ToolStripItem[] { systemStatus });
-            statusStrip.Location = new Point(0, 537);
+            statusStrip.Location = new Point(0, 564);
             statusStrip.Name = "statusStrip";
-            statusStrip.Size = new Size(724, 29);
+            statusStrip.Size = new Size(716, 22);
             statusStrip.TabIndex = 6;
             statusStrip.Text = "statusStrip1";
             // 
@@ -111,15 +112,26 @@
             // 
             systemStatus.Font = new Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
             systemStatus.Name = "systemStatus";
-            systemStatus.Size = new Size(56, 23);
+            systemStatus.Size = new Size(44, 17);
             systemStatus.Text = "Ready";
+            // 
+            // btnFormatJson
+            // 
+            btnFormatJson.Location = new Point(543, 521);
+            btnFormatJson.Name = "btnFormatJson";
+            btnFormatJson.Size = new Size(115, 30);
+            btnFormatJson.TabIndex = 7;
+            btnFormatJson.Text = "Format Json";
+            btnFormatJson.UseVisualStyleBackColor = true;
+            btnFormatJson.Click += btnFormatJson_Click;
             // 
             // Dashboard
             // 
-            AutoScaleDimensions = new SizeF(11F, 28F);
+            AutoScaleDimensions = new SizeF(9F, 21F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.White;
-            ClientSize = new Size(724, 566);
+            ClientSize = new Size(716, 586);
+            Controls.Add(btnFormatJson);
             Controls.Add(statusStrip);
             Controls.Add(resultsTextbox);
             Controls.Add(apiTextbox);
@@ -149,5 +161,6 @@
         private TextBox resultsTextbox;
         private StatusStrip statusStrip;
         private ToolStripStatusLabel systemStatus;
+        private Button btnFormatJson;
     }
 }
